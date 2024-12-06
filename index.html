@@ -140,16 +140,16 @@
  
 		
 		embedded_svc.init(
-			'https://publica--dev.sandbox.my.salesforce.com',
-			'https://publica--dev.sandbox.my.salesforce-sites.com/',
+			'https://publica--devsk.sandbox.my.salesforce.com',
+			'https://publica--devsk.sandbox.my.salesforce-sites.com/',
 			gslbBaseURL,
-			'00D0E000000HMQy',
+			'00DVe000001hqHJ',
 			'CDC_Chat',
 			{
-				baseLiveAgentContentURL: 'https://c.la2-c1cs-fra.salesforceliveagent.com/content',
+				baseLiveAgentContentURL: 'https://c.la12s-core1.sfdc-cehfhs.salesforceliveagent.com/content',
 				deploymentId: '5720X000000bok8',
 				buttonId: '5730X000000bol6',
-				baseLiveAgentURL: 'https://d.la2-c1cs-fra.salesforceliveagent.com/chat',
+				baseLiveAgentURL: 'https://d.la12s-core1.sfdc-cehfhs.salesforceliveagent.com/chat',
 				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I0X000000KyyrUAC_16d04fc7894',
 				isOfflineSupportEnabled: true
 			}
@@ -158,7 +158,7 @@
  
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://publica--dev.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://publica--devsk.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
