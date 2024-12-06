@@ -1,32 +1,127 @@
 <html>
-    <head>
-        <title>Cotswold District Council Chat Bot Dummy Page</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<head>
+<title>Cotswold District Council Chat Bot Dummy Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 </head>
-
-    <body>
-	    <style type='text/css'>
+<style>
+      .hdrDiv {
+      background-color: #017AC2;
+      margin: 0px;
+      padding: 4px 128px 4px 128px;
+      }
+      .ftrDiv {
+      background-color: #123899;
+      margin: 0px;
+      padding: 4px;
+      }
+      .contDiv {
+      background-color: #FFFFFF;
+      margin: 0px;
+      padding: 32px 128px 512px 128px;
+       }
+      .hdrText {
+      background-color: #017AC2;
+      }
+      .ftrText {
+      background-color: #123899;
+      }
+</style>
+<body>
+<div class="hdrDiv"><span style="font-family:Arial, sans-serif; font-size:45px;color:white"><strong>Cotswold District Council (DEV)</strong></span></div>
+<div class="ftrDiv"></div>
+<div class="contDiv">
+<span style="font-family:Arial, sans-serif; font-size:18px;color:grey">CDC DEV Org Chat Bot Dummy Page . . .</span>
+</div>
+<div class="hdrDiv">
+<br><span style="font-family:Arial, sans-serif; font-size:25px;color:white">Find out more</span><br>
+<br>
+<hr>
+<br><span style="font-family:Arial, sans-serif; font-size:15px;color:white">Privacy statement</span><br><br>
+</div>
+<div class="ftrDiv"></div>
+ 
+ 
+<style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
-		background-color: #005290;
-		font-family: "Arial", sans-serif;
+		background-color: #017ac2;
+		font-family: "Arial", sans-serif;    
+    		border: 2px solid #fff;
+    		border-radius: 5px 5px 0px 0px;
 	}
 	.embeddedServiceHelpButton .helpButton .uiButton:focus {
 		outline: 1px solid #005290;
 	}
+ 
+		/* Ben Additions */
+	.embeddedServiceSidebarButton
+	{
+		background-color: #12649a !Important;
+		font-family: "Arial", sans-serif; 
+		border: 2px solid #fff !important;
+    		border-radius: 5px;
+		box-shadow: 0 2px 0 #002d18 !important;
+		margin: 5px 0 !important;
+	}
+	.embeddedServiceSidebarButton.uiButton--inverse 
+	{
+		color: #12649a !important;
+		background-color:#fbfafa !important;
+		border: 1px solid #efeaea !important;
+	}
+ 
+	.embeddedServiceSidebarButton.uiButton--inverse .label {
+    		color: #12649a !important;
+		box-shadow: none !important;
+	}
+	.embeddedServiceSidebarMinimizedDefaultUI.newMessage, .embeddedServiceSidebarMinimizedDefaultUI.idleTimeout
+	{
+		background-color:#16866c !important;
+		border: 1px solid #efeaea !important;
+		color: #36156e !important;
+	}
+	.chatHeaderBranding {
+        	border-bottom: 5px solid #123899 !important;
+	}
+	.embeddedServiceLiveAgentStateChat .endChatContainer {
+	    	padding: 0 0 20px 38px !important;
+	}
+   /* Added By Ben 04/04/2024 */
+	.embeddedServiceLiveAgentStateChatMenuMessage .rich-menu {
+    	margin-left: 40px !important;
+    	width: auto !important;
+		max-width:50% !important;
+	}
+	.headerAnnouncement[lwc-56vbshdpqil] {
+		background-color:#017ac2 !important; 
+	}
+	/*media queries for small devices*/
+       @media screen and (max-width: 678px) {
+ 
+           .embeddedServiceLiveAgentStateChatMenuMessage .rich-menu {
+               margin-left: 10px !important;
+               width: auto !important;
+               max-width: 100% !important;
+           }
+       }	
+/* End Of Ben's Additions*/
+	/* End of Bens Additions */
 </style>
-
+ 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
+		//Next two lines added to initESW() function in order to force a dummy value in to the Case.Subject field 2020-06-18-Guy-Taylor
+               	embedded_svc.settings.extraPrechatFormDetails = [{"label": "Subject", "value": "Chat Placeholder Subject", "displayToAgent": false}];
+               	embedded_svc.settings.extraPrechatInfo = [{"entityFieldMaps": [{"doCreate": true, "doFind": false, "fieldName": "Subject", "isExactMatch": false, "label": "Subject"}], "entityName": "Case"}];
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
-
+ 
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
 		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
-
+ 
 		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
 		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
-
+ 
 		// Settings for Chat
 		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
 			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
@@ -34,11 +129,16 @@
 		//};
 		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
 		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
-		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
-
+		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)		
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
-
+ 
+		// Added By Ben to Fix width & Height - 04/04/2024
+		embedded_svc.settings.widgetHeight = "90%";
+		embedded_svc.settings.widgetWidth = "70%";
+		// End of Ben's ammendments
+ 
+		
 		embedded_svc.init(
 			'https://publica--devsk.sandbox.my.salesforce.com',
 			'https://publica--devsk.sandbox.my.salesforce-sites.com/',
@@ -55,7 +155,7 @@
 			}
 		);
 	};
-
+ 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
 		s.setAttribute('src', 'https://publica--devsk.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
@@ -67,6 +167,8 @@
 		initESW('https://service.force.com');
 	}
 </script>
-        
-    </body>
+
+ 
+ 
+   </body>
 </html>
