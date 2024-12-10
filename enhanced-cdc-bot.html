@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <head>
 <title>Cotswold District Council Enhanced Chat Bot Dummy Page</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
@@ -23,4 +23,36 @@
     };
 </script>
    </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>Cotswold District Council Enhanced Chat Bot Dummy Page</title>
+</head>
+<body>
+    <script type='text/javascript'>
+        function initEmbeddedMessaging() {
+            try {
+                console.log('Initializing Embedded Messaging...');
+                embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+                embeddedservice_bootstrap.init(
+                    '00DVe000001hqHJ',
+                    'CDC_Chat_Enhanced',
+                    'https://publica--devsk.sandbox.my.site.com/ESWCDCChatEnhanced1733841881758',
+                    {
+                        scrt2URL: 'https://publica--devsk.sandbox.my.salesforce-scrt.com'
+                    }
+                );
+                console.log('Embedded Messaging initialized successfully.');
+            } catch (err) {
+                console.error('Error loading Embedded Messaging: ', err);
+            }
+        };
+    </script>
+    <script type='text/javascript' src='https://publica--devsk.sandbox.my.site.com/ESWCDCChatEnhanced1733841881758/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+</body>
 </html>
