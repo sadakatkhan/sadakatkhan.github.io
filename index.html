@@ -1,80 +1,33 @@
 <html>
 <head>
-<title>Cotswold District Council Chat Bot Dummy Page</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-	<link rel="apple-touch-icon" sizes="180x180" href="https://www.cotswold.gov.uk/assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://www.cotswold.gov.uk/assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://www.cotswold.gov.uk/assets/images/favicon-16x16.png">
-    <link rel="shortcut icon" href="https://www.cotswold.gov.uk/assets/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 </head>
-<style>
-      .hdrDiv {
-      background-color: #017AC2;
-      margin: 0px;
-      padding: 4px 128px 4px 128px;
-      }
-      .ftrDiv {
-      background-color: #123899;
-      margin: 0px;
-      padding: 4px;
-      }
-      .contDiv {
-      background-color: #FFFFFF;
-      margin: 0px;
-      padding: 32px 128px 512px 128px;
-       }
-      .hdrText {
-      background-color: #017AC2;
-      }
-      .ftrText {
-      background-color: #123899;
-      }
-</style>
 <body>
-<div class="hdrDiv"><span style="font-family:Arial, sans-serif; font-size:45px;color:white"><strong>Cotswold District Council (DEV-SK)</strong></span></div>
-<div class="ftrDiv"></div>
-<div class="contDiv">
-<span style="font-family:Arial, sans-serif; font-size:18px;color:grey">CDC DEV Org Chat Bot Dummy Page . . .</span><br>
-<span style="font-family:Arial, sans-serif; font-size:18px;color:red">SADAKAT'S DEV ENVIRONMENT</span>
-</div>
-<div class="hdrDiv">
-<br><span style="font-family:Arial, sans-serif; font-size:25px;color:white">Find out more</span><br>
-<br>
-<hr>
-<br><span style="font-family:Arial, sans-serif; font-size:15px;color:white">Privacy statement</span><br><br>
-</div>
-<div class="ftrDiv"></div>
- 
- <style type='text/css'>
-	.embeddedServiceHelpButton .helpButton .uiButton {
-		background-color: #005290;
-		font-family: "Arial", sans-serif;
-	}
-	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 1px solid #005290;
-	}
-</style>
-
 <script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+    function initEmbeddedMessaging() {
+        try {
+            embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-			embeddedservice_bootstrap.init(
-				'00DVe0000026Yc9',
-				'TEST',
-				'https://publica--devgtbkp.sandbox.my.site.com/ESWTEST1737540858208',
-				{
-					scrt2URL: 'https://publica--devgtbkp.sandbox.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
+            embeddedservice_bootstrap.init(
+                '00DVe0000026Yc9',
+                'TEST',
+                'https://publica--devgtbkp.sandbox.my.site.com/ESWTEST1737540858208',
+                {
+                    scrt2URL: 'https://publica--devgtbkp.sandbox.my.salesforce-scrt.com'
+                }
+            );
+        } catch (err) {
+            console.error('Error loading Embedded Messaging: ', err);
+        }
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var element = document.querySelector('.your-element-class');
+        if (element) {
+            element.classList.add('new-class');
+        }
+    });
 </script>
 <script type='text/javascript' src='https://publica--devgtbkp.sandbox.my.site.com/ESWTEST1737540858208/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
- 
-   </body>
+</body>
 </html>
